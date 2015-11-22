@@ -1,0 +1,7 @@
+{
+  "watch": [
+    "webpack/*",
+    "src/server.js",
+    "src/server/*"
+  ]
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A webapp</title>
+    <style>
+      /* Any styles you want present before the webpack bundle loads go here */
+    </style>
+  </head>
+  <body>
+  <%- body %>
+    <div id="root">
+      <div id="loading">
+        <!-- put a spinner here or something -->
+      </div>
+    </div>
+  <% if (env.production) { %>
+    <script async src="<%= env.assets.bundle.js %>"></script>
+  <% } else { %>
+    <script src="http://localhost:3001/static/bundle.js"></script>
+  <% } %>
+  </body>
+</html>
